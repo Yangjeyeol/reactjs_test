@@ -53,7 +53,7 @@ class Counter extends Component {
 
     render() {
         return (
-            <div>
+            <div className="wrap">
                 <h1>카운터</h1>
                 <div>값: {this.state.number}</div>
                 <button onClick={this.handleIncrease}>+</button>
