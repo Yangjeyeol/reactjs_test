@@ -5,7 +5,7 @@ class User extends Component {
         return nextProps.user !== this.props.user;
     }
     render() {
-        const { user: { username } } = this.props;
+        const { username } = this.props.user.toJS();
         console.log('%s가 렌더링 되고 있어요!!!', username);
         return (
             <div>
