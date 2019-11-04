@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-//import ImmutableTest from './components/ImmutableTest'
+//import App from './App';
+import App from './components2/App';
+//import ImmutableTest from './components/ImmutableTest';
+//import RecordTest from './components2/RecordTest';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<App />, document.getElementById('root'));
