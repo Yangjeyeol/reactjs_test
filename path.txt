@@ -1,1 +1,7 @@
 set path=%path%;C:\Program Files (x86)\Yarn\bin;C:\Program Files\nodejs;C:\Users\Administrator\appdata\Local\Yarn\bin
+
+
+git config --global user.name "yang10"
+git config --global user.email "yangejeyeol@gmail.com"
+
+git config --list
