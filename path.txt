@@ -1,4 +1,4 @@
-set path=%path%;C:\Program Files (x86)\Yarn\bin;C:\Program Files\nodejs;C:\Users\Administrator\appdata\Local\Yarn\bin
+set path=%path%;C:\Program Files (x86)\Yarn\bin;C:\Program Files\nodejs;C:\Users\User\appdata\Local\Yarn\bin;C:\Program Files\Git\bin
 
 
 git config --global user.name "yang10"
