@@ -6,12 +6,12 @@ const INSERT = "todo/INSERT";
 const TOGGLE = "todo/TOGGLE";
 const REMOVE = "todo/REMOVE";
 
-export const change_input = createAction(CHANGE_INPUT, value => value);
+export const changeInput = createAction(CHANGE_INPUT, value => value);
 export const insert = createAction(INSERT, text => text);
 export const toggle = createAction(TOGGLE, id => id);
 export const remove = createAction(REMOVE, id => id);
 
-let id = 0;
+let id = 2;
 
 const Data = Record({
     id: null,
@@ -21,7 +21,18 @@ const Data = Record({
 
 const initialState = Record({
     input: '',
-    todos: List()
+    todos: List([
+        Data({
+            id: 0,
+            text: '아나바다',
+            checked: false
+        }),
+        Data({
+            id: 1,
+            text: '가을바다',
+            checked: false
+        })
+    ])
 })();
 
 export default handleActions({

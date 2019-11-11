@@ -5,25 +5,39 @@ import { bindActionCreators } from 'redux'
 import * as todoActions from 'store/modules/todo';
 
 class TodosContainer extends Component {
-    handleChange = () => {
-
+    handleChange = (e) => {
+        const { TodoActions } = this.props;
+        TodoActions.changeInput(e.target.value);
     }
 
-    handleInsert = () => {
-
+    handleInsert = (e) => {
+        const { TodoActions, input } = this.props;
+        TodoActions.insert(input);
+        TodoActions.changeInput('');
     }
 
-    handleToggle = () => {
-
+    handleToggle = (id) => {
+        const { TodoActions } = this.props;
+        TodoActions.toggle(id);
     }
 
-    handleRemove = () => {
-
+    handleRemove = (id) => {
+        const { TodoActions } = this.props;
+        TodoActions.remove(id);
     }
 
     render() {
+        const { handleChange, handleInsert, handleToggle, handleRemove } = this;
+        const { input, todos } = this.props;
         return (
-            <Todos />
+            <Todos 
+                input={input}
+                todos={todos}
+                onChange={handleChange}
+                onInsert={handleInsert}
+                onToggle={handleToggle}
+                onRemove={handleRemove}
+            />
         );
     }
 }
